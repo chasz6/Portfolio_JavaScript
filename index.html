@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Numerología</title>
+    </head>
+<body>
+
+    <header class="content-wrapper">
+        <h1 class="content-wrapper">Numerología Pitagórica</h1>
+    </header>
+
+    <main class="content-wrapper content-centered">
+
+        <!-- Introduction to Numerology -->
+        <section class="description content-wrapper">
+            <h2>Conócete a ti mismo</h2>
+            <p>La Numerología determina las características y personalidad de las personas. 
+                Son los números quiénes marcan qué tipo de vida vamos a llevar, qué habilidades y debilidades tendremos, 
+                qué cosas nos van a suceder en la vida, las relaciones que tendremos...todo ello desde el momento en que nacemos 
+                bajo un determinado número que nos llenará de su energía. Los números se encargarán de guiar nuestro destino. 
+                Los números a tener en cuenta son los comprendidos entre el 1 y el 9, el 0 no se cuenta porque se dice que no emite 
+                ninguna vibración o frecuencia, sólo es silencio.
+            </p>
+        </section>
+
+        <section class="content-wrapper">
+            <p>
+               Para saber qué número eres, tan sólo rellena el siguiente formulario indicando tu fecha de nacimiento. 
+                Nosotros te diremos cual es tu número. ¡Pruébalo, es Gratis!
+            </p>
+            <div class="container">
+                <form id="formulario">
+                    <label for="nombre">Ingresa tu nombre completo:</label>
+                    <input id="nombre" name="nombre" class="name" type="text" id="fullName" required>
+                    <section class="section-date">
+                        <div>
+                            <label for="dd">Día:</label>
+                            <input id="dd" name="dd" class="fecha" type="text" placeholder="11" minlength="1" maxlength="2" required>
+                        </div>
+                        <div>
+                            <label for="mm">Mes:</label>
+                            <input id="mm" name="mm" class="fecha" type="text" placeholder="06" minlength="1" maxlength="2" required>
+                        </div>
+                        <div>
+                            <label for="yy">Año:</label>
+                            <input id="yy" name="yy" class="fecha" type="text" placeholder="1987" minlength="4" maxlength="4" required>
+                        </div>
+                    </section>
+                    <section class="botones">
+                        <button id="boton" type="button" class="calcular">Calcular</button>
+                        <button id="reset" type="reset" form="formulario" class="reset">Limpiar</button>
+                    </section>
+                </form>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="results content-wrapper">
+
+            <article class="nacimiento caja-punteada-par">
+                <h3>Vibración de Nacimiento</h3>
+                <p id="intro"></p>
+                <h4>Trabajo</h4>
+                <p id="trabajo"></p>
+                <h4>Posibilidades económicas</h4>
+                <p id="economia"></p>
+                <h4>Amor - Afinindades</h4>
+                <p id="amor"></p>
+            </article>
+
+            <article class="natalicio caja-punteada-impar">
+                <h3>Vibración de Natalicio</h3>
+                <p id="natalicio"></p>
+            </article>
+
+            <article class="interior caja-punteada-par">
+                <h3>Vibración de Interior</h3>
+                <p id="interior"></p>
+            </article>
+
+            <article class="exterior caja-punteada-impar">
+                <h3>Vibración Exterior</h3>
+                <p id="exterior"></p>
+            </article>
+
+            <article class="personalidad caja-punteada-par">
+                <h3>Personalidad</h3>
+                <p id="personalidad"></p>
+            </article>
+
+            <article class="individualidad caja-punteada-impar">
+                <h3 id="ind">Individualidad - Potencialidad</h3>
+                <p id="individualidad"></p>
+            </article>
+            
+            <article class="temperamento caja-punteada-par">
+                <h3 id="temp">Temperamento, aptitudes</h3>
+                <p id="temperamento"></p>
+            </article>
+
+            <article class="pinaculos caja-punteada-impar">
+                <h3>Pináculos</h3>
+                <p id="pin1"></p>
+                <p id="pin2"></p>
+                <p id="pin3"></p>
+                <p id="pin4"></p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Creado por Charly - <a href="mailto:charlyalegre6@gmail.com">charlyalegre6@gmail.com</a></p>
+    </footer>
+
+    <script type="module" src="/index.js" ></script>
+</body>
+</html>

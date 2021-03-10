@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;600&family=Raleway:wght@200;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap'); */
+
+/* --- CSS Foundations --- */
+:root {
+/* --- Colors --- */
+    --text-color        :   rgb(53, 53, 53);
+    --hover-color       :   #000000;
+    --title-color       :   #FFFFFF;
+    --bg-color0         :   #f8da70;
+    --bg-color1         :   #fa496e;
+    --bg-color2         :   #ff8522;
+    --bg-color3         :   #00dcab;
+    --bg-color4         :   #52dbff;
+    --bg-color5         :   #c28ee3;
+    --bg-color6         :   #7e5268;
+    --bg-color7         :   #c4b87e;
+    --body-bg-color     :   #f5f5f4;
+    --white-color       :   #ffffff;
+    --shadow-color      :   #434343;
+    --h4-color          :   #777777;
+
+/* --- Font Types --- */
+    --body-font-type    :   "Dosis",    "sans-serif";
+    --title-font-type   :   "Raleway",  "sans-serif";
+
+/* --- Max Screen Width --- */
+    --max-width         :   1200px;
+
+/* --- Section Heights --- */
+    --header-height     :   3rem;
+    --section-gap       :   4rem;
+    --block-spacing     :   2rem;
+    --body-line-height  :   1.6;
+    --title-line-height :   2rem;
+    --padding-result-box:   2rem;
+    --padding-res-box-m :   1rem;
+
+/* --- Font Sizes --- */
+    --h1-font-size      :   1.5rem;
+    --h2-font-size      :   1.25rem;
+    --h3-font-size      :   1rem;
+    --font-size-normal  :   1rem;
+    --font-weight-dosis :   600;
+    --font-weight-ralew :   500;
+
+/* --- Layers --- */
+    --z-back            :   -10;
+    --z-nomarl          :   1;
+    --z-fixed           :   50;
+    --z-off-canvas      :   100;
+
+/* --- Others --- */
+    --border-radius     :   0.25rem;
+    --b-radius-descrip  :   1.5rem;
+    --border            :   1px solid var(--shadow-color);
+    --box-shadow        :   0 1px 2px rgba(36, 47, 66, 0.5);
+    --text-shadow       :   0 1px 1px var(--shadow-color);
+}
+
+
+
+/* --- Desktop Heights Variables --- */
+@media screen and (min-width: 1024px) {
+    :root {
+        --header-height     :   4rem;
+        --section-gap       :   8rem;
+        --block-spacing     :   4rem;
+        --h1-font-size      :   3rem;
+        --h2-font-size      :   2rem;
+        --h3-font-size      :   1.5rem;
+        --font-weigth-dosis :   600;
+        --font-weight-ralew :   500;
+    }
+}
+
+
+
+/* ---  Body Styles  ---- */
+body {
+    display             :   flex;
+    flex-direction      :   column;
+    min-height          :   calc(100vh - var(--header-height));
+    color               :   var(--text-color);
+    padding-top         :   var(--header-height);
+    font-family         :   var(--body-font-type);
+    font-size           :   var(--font-size-normal);
+    line-height         :   var(--body-line-height);
+    background-color    :   var(--body-bg-color);
+}
+
+
+p {
+    margin-top          :   0;
+    text-align          :   justify;
+    font-size           :   var(--font-size-normal);
+}
+
+/* --- Desktop --- */
+@media screen and (min-width: 1024px) {
+    p {
+        --font-size-normal  :   1.5rem;
+    }
+}
+
+/* --- Títulos --- */
+h1,
+h2,
+h3,
+h4 {
+    margin-top          :   0;
+    font-family         :   var(--title-font-type);
+    line-height         :   var(--title-line-height);
+    font-weight         :   600;
+    font-family         :   var(--title-font-type);
+}
+
+h1 {
+    text-align          :   center;
+    font-size           :   var(--h1-font-size);
+    background-color    :   var(--shadow-color);
+    color               :   var(--white-color);
+}
+
+/* --- Desktop --- */
+@media screen and (min-width: 1024px) {
+    h1 {
+        background-color:   var(--body-bg-color);
+        color: var(--text-color);
+    }
+
+    h1.content-wrapper,
+    header.content-wrapper {
+        margin          :   1rem auto;
+    }
+
+}
+
+
+h2 {
+    margin-top          :   var(--padding-res-box-m);
+    font-size           :   var(--h2-font-size);
+    text-align          :   center;
+    margin-bottom       :   0.25rem;
+}
+
+h3 {
+    color               :   var(--white-color);
+    text-shadow         :   var(--text-shadow);
+}
+
+h4 {
+    margin-bottom       :   0;
+    font-size           :   small;
+    line-height         :   1.2;
+    padding             :   var(--padding-res-box-m);
+    padding-bottom      :   0;
+    text-align          :   center;
+}
+
+
+/* --- Desktop --- */
+@media screen and (min-width: 1024px) {
+    h2 {
+        margin-top          :   var(--block-spacing);
+        text-align          :   left;
+    }
+
+    h4 {
+        margin-left         :   var(--padding-result-box);
+        margin-bottom       :   0;
+        padding-top         :   var(--padding-result-box);
+        padding-left        :   0;
+        font-size           :   var(--h3-font-size);
+        color               :   var(--h4-color);
+        text-align          :   left;
+    }
+}
+
+
+/* --- Estilos de formulario --- */
+form {
+    display             :   flex;
+    flex-direction      :   column;
+    align-items         :   center;
+    text-align          :   center;
+    margin              :   0;
+}
+
+
+.name {
+    height              : 1.5rem;
+    font-size           : var(--h3-font-size);
+    font-weight         : var(--font-weight-dosis);
+    text-align          : center;
+    width               : 100%;   
+}
+
+
+.section-date {
+    display             : flex;
+    justify-content     : space-around;
+    padding-top         : 0.5em;
+    width               : 80%;
+}
+
+
+.fecha::placeholder {
+    text-align          : center;
+    font-size           : 1rem;
+}
+
+
+.fecha {
+    display             : flex;
+    flex-direction      : row;
+    width               : 75%;
+    height              : 1.5rem;
+    text-align          : center;
+    font-size           : var(--h3-font-size);
+    font-weight         : var(--font-weight-dosis);
+}
+
+
+label, input {
+    display             :   flex;
+    line-height         :   var(--body-line-height);
+    border-radius       :   var(--border-radius);
+    border-color        :   var(--border);
+    align-items         :   center;
+}
+
+
+label {
+    font-weight         :   var(--font-weight-dosis);
+}
+
+
+.botones {
+    display             : flex;
+    padding-top         : var(--h2-font-size);
+    width               : 90%;
+    justify-content     : space-evenly;
+}
+
+
+.reset, .calcular {
+    height              : 1.5rem;
+    width               : 5rem;
+    font-weight         : var(--font-weight-dosis);
+    font-size           : 0.75rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .name {
+        height              : 2rem;
+        font-size           : var(--h2-font-size);
+        text-align          : center;
+        width               : 75%;
+    }
+    
+    
+    .section-date {
+        display             : flex;
+        justify-content     : space-around;
+        padding-top         : 0.5em;
+        width               : 60%;
+    }
+    
+    
+    .fecha::placeholder {
+        text-align          : center;
+        font-size           : 1rem;
+    }
+    
+    
+    .fecha {
+        display             : flex;
+        flex-direction      : row;
+        width               : 75%;
+        height              : 2rem;
+        text-align          : center;
+        font-size           : var(--h2-font-size);
+    }
+
+    .botones {
+        display             : flex;
+        padding-top         : var(--h2-font-size);
+        width               : 50%;
+        justify-content     : space-evenly;
+    }
+
+    .reset, .calcular {
+        height              : 2rem;
+        width               : 6rem;
+        font-weight         : var(--font-weight-dosis);
+        font-size           : var(--body-font-type);
+    }
+}
+
+
+
+
+.reset:hover,
+.calcular:hover {
+    background-color    :   var(--hover-color);
+    color               :   var(--white-color);
+}
+
+
+/* --- Estilos de formulario sólo para desktop --- */
+@media screen and (min-width: 1024px) {
+    label {
+        font-size       :   1.25rem;
+    }
+}
+
+
+
+.container {
+    margin-bottom       :   var(--section-gap);
+    width               : 80%;
+    margin-left         : auto;
+    margin-right        : auto;
+}
+
+
+.main h1 {
+    margin-bottom       :   var(--block-spacing);
+    padding-top         :   var(--block-spacing);
+}
+
+
+
+/* --- Content Wrapper --- */
+.content-wrapper {
+    width               :   calc(100% - 2rem);
+    max-width           :   var(--max-width);
+    margin-left         :   1rem;
+    margin-right        :   1rem;
+}
+
+.caja-punteada-impar {
+    border                      :   1px solid rgb(var(--shadow-color));
+    border-top-left-radius      :   var(--b-radius-descrip);
+    border-bottom-right-radius  :   var(--b-radius-descrip);
+    margin-bottom               :   var(--block-spacing);
+    box-shadow                  :   var(--box-shadow);
+    background-color            :   var(--white-color);
+}
+
+.caja-punteada-par {
+    border                      :   1px solid rgb(var(--shadow-color));
+    border-top-right-radius     :   var(--b-radius-descrip);
+    border-bottom-left-radius   :   var(--b-radius-descrip);
+    margin-bottom               :   var(--block-spacing);
+    box-shadow                  :   var(--box-shadow);
+    background-color            :   var(--white-color);
+}
+
+
+.results article p {
+    align-items         :   stretch; /* Hace que se adapte la caja al contenido que se imprime */
+    padding             :   var(--padding-res-box-m);
+    padding-top         :   0;
+    box-sizing          :   border-box;
+    margin              :   0;
+}
+
+
+/* --- Para desktop --- */
+@media screen and (min-width: 1024px) {
+    .results article p {
+        padding             :   var(--padding-result-box);
+        padding-top         :   0;
+    }
+
+    .results article p:not(:last-of-type) {
+        padding-bottom      : 0;
+    }
+}
+
+
+/* --- Estilos de las cajas donde aparecen los resultados --- */
+.results article p:not(:first-of-type) {
+    padding-top         :   0;
+}
+
+.results article h3 {
+    text-align          :   center;
+    margin-block-end    :   0;
+}
+
+.nacimiento h3 {
+    background-color        :   var(--bg-color0);
+}
+
+.natalicio h3 {
+    background-color        :   var(--bg-color1);
+    border-top-left-radius  :   var(--b-radius-descrip);
+}
+
+.interior h3 {
+    background-color        :   var(--bg-color2);
+    border-top-right-radius :   var(--b-radius-descrip);
+}
+
+.exterior h3 {
+    background-color        :   var(--bg-color3);
+    border-top-left-radius  :   var(--b-radius-descrip);
+}
+
+.personalidad h3 {
+    background-color        :   var(--bg-color4);
+    border-top-right-radius :   var(--b-radius-descrip);
+}
+
+.individualidad h3 {
+    background-color        :   var(--bg-color5);
+    border-top-left-radius  :   var(--b-radius-descrip);
+}
+
+.temperamento h3 {
+    background-color        :   var(--bg-color6);
+    border-top-right-radius :   var(--b-radius-descrip);
+}
+
+.pinaculos h3 {
+    background-color        :   var(--bg-color7);
+    border-top-left-radius  :   var(--b-radius-descrip);
+}
+
+
+/* --- Estilos sólo para desktop --- */
+@media screen and (min-width: 1024px) {
+    h3 {
+        line-height         :   var(--block-spacing);
+        font-size           :   1.75rem;
+    }
+}
+
+
+
+
+.content-centered {
+    display             :   flex;
+    flex-direction      :   column;
+    align-items         :   center;
+    max-width           :   1024px;
+    margin              :   0 auto;
+}
+
+
+/* --- Sólo desktop --- */
+@media screen and (min-width: 1024px) {
+    .button {
+        width           :   7rem;
+        font-size       :   var(--font-size-normal);
+    }
+}
+
+
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--hover-color)
+}
